@@ -152,8 +152,24 @@ body {
     border: 1px solid #000 !important;
 }
 /********************************* 
-*** GLOBAL STYLES
+*** SEARCH OUTPUT STYLES
 *********************************/
+.search__output {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    grid-auto-flow: dense;
+    justify-content: center;
+    align-content: top;
+    align-items: top;
+}
+
+.search__img {
+    max-width: 100%;
+    align-self: center;
+    justify-self: center;
+}
 
 
 /********************************* 
