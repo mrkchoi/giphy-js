@@ -66,6 +66,7 @@ body {
     text-transform: uppercase;
     color: #fff;
     font-size: 3rem;
+    transition: all 100ms;
 }
 
 .header__nav--icon {
@@ -116,12 +117,16 @@ body {
     margin-right: 1rem;
     background-color: rgba(0,0,0,.2) !important;
     color: #fff !important;
+    transition: all 100ms;
 }
 .search__input::placeholder {
     color: #fff;
 }
 .search__input:focus {
     border: 1px solid #fff !important;
+}
+.search__input:hover {
+    background-color: rgba(0,0,0,.3) !important;
 }
 
 .search__btn {
@@ -171,6 +176,7 @@ body {
     max-width: 100%;
     align-self: center;
     justify-self: center;
+    border-radius: 2px;
 }
 
 
@@ -197,6 +203,40 @@ body {
         background-color: #fff !important;
         color: #000 !important;
     }
+
+    .container {
+        padding: 3rem 2rem;
+    }
 }
 
 
+
+/* STICKY HEADER STYLES  */
+/*
+
+.wrapper__main {
+    width: 100vw;
+    height: 17rem;
+}
+
+.content__main {
+    display: none;
+}
+
+.header__wrapper {
+    height: 6rem;
+}
+
+.search__input {
+    height: 4rem !important;
+    border-radius: 4rem !important;
+    font-size: 1.6rem;
+}
+
+.search__btn {
+    height: 4rem !important;
+    border-radius: 4rem !important;
+    font-size: 1.6rem;
+}
+
+*/

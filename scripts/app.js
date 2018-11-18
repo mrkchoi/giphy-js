@@ -11,10 +11,6 @@ let output = document.querySelector('.search__output'),
     term,
     data;
 
-
-
-
-
 // Add event listener on submit
 searchForm.addEventListener('submit', userInput);
 
