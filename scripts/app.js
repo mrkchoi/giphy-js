@@ -11,24 +11,27 @@ let output = document.querySelector('.search__output'),
     term,
     data;
 
-// Change search term string to the correct string+string format
-// Push searchTerm into our API fetch
-// Add event listener on submit
-// Update the DOM with our returned data
 
+
+
+
+// Add event listener on submit
 searchForm.addEventListener('submit', userInput);
 
+// Listen for user input [search query]
 function userInput(e) {
     e.preventDefault();
+    // Change search term string to the correct string+string format
     let newTerm = searchTerm.value;
     // To lowercase & replace ' ' with '+'
     term = newTerm.split(' ').join('+');
+    // Push searchTerm into our API fetch
     getData(term);
-    updateGrid();
 }
 
-function getData(term) {
-    fetch(`http://api.giphy.com/v1/gifs/search?q=${term}&api_key=${apiKey}&limit=24`)
+// Fetch data from GIPHY API
+async function getData(term) {
+    await fetch(`http://api.giphy.com/v1/gifs/search?q=${term}&api_key=${apiKey}&limit=48`)
         .then(blob => {
             return blob.json();
         })
@@ -36,9 +39,11 @@ function getData(term) {
             data = response.data;
             return data;
         });
+        updateGrid(data);
 }
 
-function updateGrid() {
+// Update the DOM with our returned data
+function updateGrid(data) {
     // Loop through the JSON data, grab the correct URL
     let outputTemplate = '';
     data.forEach(item => {
@@ -47,7 +52,7 @@ function updateGrid() {
         <img src="${item.images.original.url}" alt="GIF from GIPHY API" class="search__img grid-item">
         `;
     });
-
+    // Set the template string as DOM output
     output.innerHTML = outputTemplate;
 }
 
