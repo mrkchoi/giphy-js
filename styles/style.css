@@ -117,7 +117,7 @@ body {
     margin-right: 1rem;
     background-color: rgba(0,0,0,.2) !important;
     color: #fff !important;
-    transition: all 100ms;
+    transition:  background-color 100ms, height 0ms;
 }
 .search__input::placeholder {
     color: #fff;
@@ -180,6 +180,54 @@ body {
 }
 
 
+
+/********************************* 
+*** STICKY HEADER STYLES
+*********************************/
+.sticky.wrapper__main {
+    width: 100vw;
+    height: 13rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.sticky.wrapper__output {
+    margin-top: 25rem;
+}
+
+.sticky.container__header {
+    height: initial !important;
+    margin-top: 0;
+    padding-top: 1.8rem;
+}
+
+.sticky.content__main {
+    display: none;
+}
+
+.sticky.header__wrapper {
+    height: 5rem;
+}
+
+.sticky.search__input {
+    height: 4rem !important;
+    border-radius: 4rem !important;
+    font-size: 1.6rem;
+}
+
+.sticky.search__btn {
+    height: 4rem !important;
+    border-radius: 4rem !important;
+    font-size: 1.6rem;
+}
+
+.sticky.wrapper__main {
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+    background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.4)), url('../assets/img/flower2-bg.jpg');
+}
+
+
+
 /********************************* 
 *** MEDIA QUERIES
 *********************************/
@@ -188,15 +236,15 @@ body {
     .search__form {
         display: flex;
         justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .search__input {
-        margin-right: 0;
+        /* margin-right: initial; */
     }
 
     .wrapper__main {
-        height: 59rem;
+        height: 53rem;
     }
 
     .search__btn {
@@ -207,36 +255,54 @@ body {
     .container {
         padding: 3rem 2rem;
     }
+
+
+
+
+    .sticky.wrapper__main {
+        width: 100vw;
+        height: 8rem;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+    .sticky.wrapper__output {
+        margin-top: 25rem;
+    }
+    
+    .sticky.container__header {
+        height: initial !important;
+        margin-top: 0;
+        padding-top: 1.8rem;
+    }
+    
+    .sticky.content__main {
+        display: none;
+    }
+    
+    .sticky.header__main {
+        display: none !important;
+    }
+    .sticky.header__wrapper {
+        height: 5rem;
+    }
+    
+    .sticky.search__input {
+        height: 4rem !important;
+        border-radius: 4rem !important;
+        font-size: 1.6rem;
+    }
+    
+    .sticky.search__btn {
+        height: 4rem !important;
+        border-radius: 4rem !important;
+        font-size: 1.6rem;
+    }
+    
+    .sticky.wrapper__main {
+        box-shadow: 0 5px 20px rgba(0,0,0,.3);
+        background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.4)), url('../assets/img/flower2-bg.jpg');
+    }
 }
 
 
-
-/* STICKY HEADER STYLES  */
-/*
-
-.wrapper__main {
-    width: 100vw;
-    height: 17rem;
-}
-
-.content__main {
-    display: none;
-}
-
-.header__wrapper {
-    height: 6rem;
-}
-
-.search__input {
-    height: 4rem !important;
-    border-radius: 4rem !important;
-    font-size: 1.6rem;
-}
-
-.search__btn {
-    height: 4rem !important;
-    border-radius: 4rem !important;
-    font-size: 1.6rem;
-}
-
-*/

@@ -52,3 +52,27 @@ function updateGrid(data) {
     output.innerHTML = outputTemplate;
 }
 
+// Sticky Nav
+window.addEventListener('scroll', stickyNav);
+
+function stickyNav(e) {
+    if(scrollY >= 25) {
+        document.querySelector('.wrapper__main').classList.add('sticky');
+        document.querySelector('.content__main').classList.add('sticky');
+        document.querySelector('.header__wrapper').classList.add('sticky');
+        document.querySelector('.search__input').classList.add('sticky');
+        document.querySelector('.search__btn').classList.add('sticky');
+        document.querySelector('.wrapper__output').classList.add('sticky');
+        document.querySelector('.container__header').classList.add('sticky');
+        document.querySelector('.header__main').classList.add('sticky');
+    } else {
+        document.querySelector('.wrapper__main').classList.remove('sticky');
+        document.querySelector('.content__main').classList.remove('sticky');
+        document.querySelector('.header__wrapper').classList.remove('sticky');
+        document.querySelector('.search__input').classList.remove('sticky');
+        document.querySelector('.search__btn').classList.remove('sticky');
+        document.querySelector('.wrapper__output').classList.remove('sticky');
+        document.querySelector('.container__header').classList.remove('sticky');
+        document.querySelector('.header__main').classList.remove('sticky');
+    }
+}
